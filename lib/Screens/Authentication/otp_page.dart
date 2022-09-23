@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'sign_up.dart';
 
-
 import '../../Styles/app_colors.dart';
 import '../../Utils/router.dart';
 import '../Home/home.dart';
@@ -75,7 +74,8 @@ class _OtpPAgeState extends State<OtpPAge> {
                         Row(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 10),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 10),
                               child: SizedBox(
                                 width: 290,
                                 child: TextFormField(
@@ -88,17 +88,19 @@ class _OtpPAgeState extends State<OtpPAge> {
                                     ),
                                     hintText: 'Search ',
                                     enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: AppColor.feldgrau,
-                                          width: 1,
-                                        ),
-                                        borderRadius: BorderRadius.circular(8),),
+                                      borderSide: BorderSide(
+                                        color: AppColor.feldgrau,
+                                        width: 1,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
                                     focusedBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: AppColor.feldgrau,
-                                          width: 1,
-                                        ),
-                                        borderRadius: BorderRadius.circular(8),),
+                                      borderSide: BorderSide(
+                                        color: AppColor.feldgrau,
+                                        width: 1,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -113,24 +115,28 @@ class _OtpPAgeState extends State<OtpPAge> {
                       ],
                     ),
                   ),
-                  const Image(image: AssetImage("assets/images/service.png")),
+                  const Image(
+                    image: AssetImage("assets/images/service.png"),
+                  ),
                   const SizedBox(
                     height: 20,
                   ),
                   Container(
                     padding: const EdgeInsets.all(25),
                     decoration: BoxDecoration(
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Colors.grey,
-                            offset: Offset(0.0, 1.0), //(x,y)
-                            blurRadius: 6.0,
-                          ),
-                        ],
-                        color: AppColor.white,
-                        borderRadius: const BorderRadius.only(
-                            topRight: Radius.circular(20),
-                            topLeft: Radius.circular(20))),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.grey,
+                          offset: Offset(0.0, 1.0), //(x,y)
+                          blurRadius: 6.0,
+                        ),
+                      ],
+                      color: AppColor.white,
+                      borderRadius: const BorderRadius.only(
+                        topRight: Radius.circular(20),
+                        topLeft: Radius.circular(20),
+                      ),
+                    ),
                     child: Column(
                       children: [
                         const Image(
@@ -146,9 +152,11 @@ class _OtpPAgeState extends State<OtpPAge> {
                               padding: const EdgeInsets.only(right: 10),
                               child: Container(
                                 decoration: const BoxDecoration(
-                                    color: Color(0xffD2137B),
-                                    borderRadius:
-                                    BorderRadius.all(Radius.circular(50))),
+                                  color: Color(0xffD2137B),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(50),
+                                  ),
+                                ),
                                 height: 13,
                                 width: 13,
                               ),
@@ -157,18 +165,22 @@ class _OtpPAgeState extends State<OtpPAge> {
                               padding: const EdgeInsets.only(right: 10),
                               child: Container(
                                 decoration: const BoxDecoration(
-                                    color: Color(0xffDC4C4C4),
-                                    borderRadius:
-                                    BorderRadius.all(Radius.circular(50),),),
+                                  color: Color(0xffDC4C4C4),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(50),
+                                  ),
+                                ),
                                 height: 13,
                                 width: 13,
                               ),
                             ),
                             Container(
                               decoration: const BoxDecoration(
-                                  color: Color(0xffC4C4C4),
-                                  borderRadius:
-                                  BorderRadius.all(Radius.circular(50),),),
+                                color: Color(0xffC4C4C4),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(50),
+                                ),
+                              ),
                               height: 13,
                               width: 13,
                             ),
@@ -201,31 +213,34 @@ class _OtpPAgeState extends State<OtpPAge> {
                                   child: SizedBox(
                                     width: 40,
                                     child: TextFormField(
-                                      controller: _optCode,
                                       keyboardType: TextInputType.phone,
                                       inputFormatters: [
                                         LengthLimitingTextInputFormatter(1),
                                         FilteringTextInputFormatter.digitsOnly,
                                       ],
-                                      onChanged: (value){
-                                        if(value.length == 1){
+                                      onChanged: (value) {
+                                        if (value.length == 1) {
                                           FocusScope.of(context).nextFocus();
                                         }
                                       },
                                       textAlign: TextAlign.center,
                                       decoration: InputDecoration(
                                         enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: AppColor.vividCerise,
-                                              width: 1,
-                                            ),
-                                            borderRadius: BorderRadius.circular(8)),
+                                          borderSide: BorderSide(
+                                            color: AppColor.vividCerise,
+                                            width: 1,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
                                         focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: AppColor.vividCerise,
-                                              width: 1,
-                                            ),
-                                            borderRadius: BorderRadius.circular(8),),
+                                          borderSide: BorderSide(
+                                            color: AppColor.vividCerise,
+                                            width: 1,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -235,31 +250,34 @@ class _OtpPAgeState extends State<OtpPAge> {
                                   child: SizedBox(
                                     width: 40,
                                     child: TextFormField(
-                                      controller: _optCode,
                                       keyboardType: TextInputType.phone,
                                       inputFormatters: [
                                         LengthLimitingTextInputFormatter(1),
                                         FilteringTextInputFormatter.digitsOnly,
                                       ],
-                                      onChanged: (value){
-                                        if(value.length == 1){
+                                      onChanged: (value) {
+                                        if (value.length == 1) {
                                           FocusScope.of(context).nextFocus();
                                         }
                                       },
                                       textAlign: TextAlign.center,
                                       decoration: InputDecoration(
                                         enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: AppColor.vividCerise,
-                                              width: 1,
-                                            ),
-                                            borderRadius: BorderRadius.circular(8),),
+                                          borderSide: BorderSide(
+                                            color: AppColor.vividCerise,
+                                            width: 1,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
                                         focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: AppColor.vividCerise,
-                                              width: 1,
-                                            ),
-                                            borderRadius: BorderRadius.circular(8),),
+                                          borderSide: BorderSide(
+                                            color: AppColor.vividCerise,
+                                            width: 1,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -269,31 +287,34 @@ class _OtpPAgeState extends State<OtpPAge> {
                                   child: SizedBox(
                                     width: 40,
                                     child: TextFormField(
-                                      controller: _optCode,
                                       keyboardType: TextInputType.phone,
                                       inputFormatters: [
                                         LengthLimitingTextInputFormatter(1),
                                         FilteringTextInputFormatter.digitsOnly,
                                       ],
-                                      onChanged: (value){
-                                        if(value.length == 1){
+                                      onChanged: (value) {
+                                        if (value.length == 1) {
                                           FocusScope.of(context).nextFocus();
                                         }
                                       },
                                       textAlign: TextAlign.center,
                                       decoration: InputDecoration(
                                         enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: AppColor.vividCerise,
-                                              width: 1,
-                                            ),
-                                            borderRadius: BorderRadius.circular(8)),
+                                          borderSide: BorderSide(
+                                            color: AppColor.vividCerise,
+                                            width: 1,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
                                         focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: AppColor.vividCerise,
-                                              width: 1,
-                                            ),
-                                            borderRadius: BorderRadius.circular(8)),
+                                          borderSide: BorderSide(
+                                            color: AppColor.vividCerise,
+                                            width: 1,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -303,31 +324,34 @@ class _OtpPAgeState extends State<OtpPAge> {
                                   child: SizedBox(
                                     width: 40,
                                     child: TextFormField(
-                                      controller: _optCode,
                                       keyboardType: TextInputType.phone,
                                       inputFormatters: [
                                         LengthLimitingTextInputFormatter(1),
                                         FilteringTextInputFormatter.digitsOnly,
                                       ],
-                                      onChanged: (value){
-                                        if(value.length == 1){
+                                      onChanged: (value) {
+                                        if (value.length == 1) {
                                           FocusScope.of(context).nextFocus();
                                         }
                                       },
                                       textAlign: TextAlign.center,
                                       decoration: InputDecoration(
                                         enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: AppColor.vividCerise,
-                                              width: 1,
-                                            ),
-                                            borderRadius: BorderRadius.circular(8)),
+                                          borderSide: BorderSide(
+                                            color: AppColor.vividCerise,
+                                            width: 1,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
                                         focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: AppColor.vividCerise,
-                                              width: 1,
-                                            ),
-                                            borderRadius: BorderRadius.circular(8)),
+                                          borderSide: BorderSide(
+                                            color: AppColor.vividCerise,
+                                            width: 1,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -337,31 +361,34 @@ class _OtpPAgeState extends State<OtpPAge> {
                                   child: SizedBox(
                                     width: 40,
                                     child: TextFormField(
-                                      controller: _optCode,
                                       keyboardType: TextInputType.phone,
                                       inputFormatters: [
                                         LengthLimitingTextInputFormatter(1),
                                         FilteringTextInputFormatter.digitsOnly,
                                       ],
-                                      onChanged: (value){
-                                        if(value.length == 1){
+                                      onChanged: (value) {
+                                        if (value.length == 1) {
                                           FocusScope.of(context).nextFocus();
                                         }
                                       },
                                       textAlign: TextAlign.center,
                                       decoration: InputDecoration(
                                         enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: AppColor.vividCerise,
-                                              width: 1,
-                                            ),
-                                            borderRadius: BorderRadius.circular(8)),
+                                          borderSide: BorderSide(
+                                            color: AppColor.vividCerise,
+                                            width: 1,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
                                         focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: AppColor.vividCerise,
-                                              width: 1,
-                                            ),
-                                            borderRadius: BorderRadius.circular(8)),
+                                          borderSide: BorderSide(
+                                            color: AppColor.vividCerise,
+                                            width: 1,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -371,31 +398,34 @@ class _OtpPAgeState extends State<OtpPAge> {
                                   child: SizedBox(
                                     width: 40,
                                     child: TextFormField(
-                                      controller: _optCode,
                                       keyboardType: TextInputType.phone,
                                       inputFormatters: [
                                         LengthLimitingTextInputFormatter(1),
                                         FilteringTextInputFormatter.digitsOnly,
                                       ],
-                                      onChanged: (value){
-                                        if(value.length == 1){
+                                      onChanged: (value) {
+                                        if (value.length == 1) {
                                           FocusScope.of(context).nextFocus();
                                         }
                                       },
                                       textAlign: TextAlign.center,
                                       decoration: InputDecoration(
                                         enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: AppColor.vividCerise,
-                                              width: 1,
-                                            ),
-                                            borderRadius: BorderRadius.circular(8)),
+                                          borderSide: BorderSide(
+                                            color: AppColor.vividCerise,
+                                            width: 1,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
                                         focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: AppColor.vividCerise,
-                                              width: 1,
-                                            ),
-                                            borderRadius: BorderRadius.circular(8)),
+                                          borderSide: BorderSide(
+                                            color: AppColor.vividCerise,
+                                            width: 1,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -412,7 +442,6 @@ class _OtpPAgeState extends State<OtpPAge> {
                           onTap: () {
                             // Authentication().verifyOtp(_optCode.text);
                             nextPage(context, page: const HomePage());
-
                           },
                           child: Container(
                             alignment: Alignment.center,
@@ -422,7 +451,7 @@ class _OtpPAgeState extends State<OtpPAge> {
                                 color: Colors.grey,
                                 // color: AppColor.vividCerise,
                                 borderRadius:
-                                BorderRadius.all(Radius.circular(14))),
+                                    BorderRadius.all(Radius.circular(14))),
                             child: Text(
                               "Submit",
                               style: TextStyle(
@@ -444,7 +473,4 @@ class _OtpPAgeState extends State<OtpPAge> {
       ),
     );
   }
-
-
 }
-
